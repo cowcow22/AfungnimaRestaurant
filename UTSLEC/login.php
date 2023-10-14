@@ -5,32 +5,7 @@ if (isset($_SESSION['user_id'])) {
 }
 
 $randomcaptcha = substr(uniqid(), 5);
-// if (isset($_POST["submit"])) {
-//     $username = $_POST["username"];
-//     $password = $_POST["password"];
-//     $captcha = $_POST["captcha"];
-//     $confirmcaptcha = $_POST["confirmcaptcha"];
-//     echo "<pre>";
-//     print_r($_POST);
-//     echo "</pre>";
 
-//     if ($captcha != $confirmcaptcha) {
-//         echo "<script> alert('Incorrect Captcha'); </script>";
-//     } else {
-//         $row = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM login WHERE username = '$username'"));
-//         if (isset($row) && $password == $row["password"]) {
-//             $_SESSION["user_id"] = $row["user_id"];
-//             // header("Location: internal.php");
-//         } else {
-//             echo
-//             "<script> alert('Wrong Password or Username'); </script>";
-//         }
-//     }
-// }
-
-// class Kategorimakanan
-// {
-// }
 ?>
 
 <!DOCTYPE html>
