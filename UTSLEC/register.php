@@ -5,75 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REGISTER</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
-            <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Create your account</h2>
-        </div>
-        <div id="error" class="text-danger"></div>
-        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form class="space-y-6" action="register_process.php" method="POST" onsubmit="return validasiPassword()">
-                <div>
-                    <label for="namadepan" class="block text-sm font-medium leading-6 text-gray-900">Nama Depan</label>
-                    <div class="mt-2">
-                        <input id="namadepan" name="namadepan" type="text" autocomplete="namadepan" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+    <div class="flex min-h-full flex-col justify-center px-6 py-7 lg:px-8 bg-black items-center dark:bg-gray-900">
+        <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md">
+            <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+                <h2 class="mt-5 text-center text-2xl font-bold leading-9 tracking-tight text-white">Create your account</h2>
+            </div>
+            <div id="error" class="text-danger"></div>
+            <div class="mt-5 sm:mx-auto sm:w-full sm:max-w-sm">
+                <form class="space-y-6" action="register_process.php" method="POST" onsubmit="return validasiPassword()">
+                    <div class="mb-3">
+                        <label for="namadepan" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Depan</label>
+                        <input type="text" name="namadepan" id="namadepan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                     </div>
-                </div>
-                <div>
-                    <label for="namabelakang" class="block text-sm font-medium leading-6 text-gray-900">Nama Belakang</label>
-                    <div class="mt-2">
-                        <input id="namabelakang" name="namabelakang" type="text" autocomplete="namabelakang" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    <div class="mb-3">
+                        <label for="namabelakang" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Belakang</label>
+                        <input type="text" name="namabelakang" id="namabelakang" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                     </div>
-                </div>
-                <div>
-                    <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Username</label>
-                    <div class="mt-2">
-                        <input id="username" name="username" type="text" autocomplete="username" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    <div class="mb-3">
+                        <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
+                        <input type="username" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                     </div>
-                </div>
-                <div>
-                    <label for="tanggallahir" class="block text-sm font-medium leading-6 text-gray-900">Tanggal Lahir</label>
-                    <div class="mt-2">
-                        <input id="tanggallahir" name="tanggallahir" type="date" autocomplete="tanggallahir" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    <div class="mb-3">
+                        <label for="tanggallahir" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tanggal Lahir</label>
+                        <input type="date" name="tanggallahir" id="tanggallahir" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                     </div>
-                </div>
-                <div>
-                    <label for="jeniskelamin" class="block text-sm font-medium leading-6 text-gray-900">Jenis Kelamin</label>
-                    <div class="mt-2" style="display: flex; justify-content:space-between;">
-                        <input id="jeniskelamin" name="jeniskelamin" type="radio" autocomplete="jeniskelamin" value="Laki-Laki">Laki-Laki
-                        <input id="jeniskelamin" name="jeniskelamin" type="radio" autocomplete="jeniskelamin" value="Perempuan">Perempuan
+                    <div class="mb-3">
+                        <label for="jeniskelamin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jenis Kelamin</label>
+                        <div style="display: flex; justify-content:space-between;" class="text-white">
+                            <input id="jeniskelamin" name="jeniskelamin" type="radio" autocomplete="jeniskelamin" value="Laki-Laki">Laki-Laki
+                            <input id="jeniskelamin" name="jeniskelamin" type="radio" autocomplete="jeniskelamin" value="Perempuan">Perempuan
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div class="flex items-center justify-between">
-                        <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                    <div class="mb-3">
+                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                        <input type="password" name="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                     </div>
-                    <div class="mt-2">
-                        <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    <div class="mb-3">
+                        <label for="password2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm Password</label>
+                        <input type="password" name="password2" id="password2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                     </div>
-                </div>
-                <div>
-                    <div class="flex items-center justify-between">
-                        <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Confirm Password</label>
+                    <div class="mb-3">
+                        <label for="kodereff" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kode Reff (Khusus Admin)</label>
+                        <input type="text" name="kodereff" id="kodereff" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     </div>
-                    <div class="mt-2">
-                        <input id="password2" name="password2" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    <div class="py-5">
+                        <button type="submit" name="submit" class="py-2 px-2 flex w-full justify-center bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold rounded-md hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150">Sign in</button>
                     </div>
-                </div>
-                <div>
-                    <label for="kodereff" class="block text-sm font-medium leading-6 text-gray-900">Kode Refferal (Khusus Admin)</label>
-                    <div class="mt-2">
-                        <input id="kodereff" name="kodereff" type="kodereff" autocomplete="kodereff" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                    </div>
-                </div>
-
-                <div>
-                    <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Register</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
     <script>
@@ -98,6 +81,7 @@
             }
         }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
 </body>
