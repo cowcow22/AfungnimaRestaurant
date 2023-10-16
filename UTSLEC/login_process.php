@@ -15,18 +15,15 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 if (!$row) {
     echo "User not Found!";
     //header('location:login.php');
+} else if (password_verify($password, $row['password']) && $_POST['captcha'] == $_POST['confirmcaptcha']) {
+    //Login success, set SESSION DATA
+    $_SESSION['user_id'] = $row['id'];
+    $_SESSION['role'] = $row['role'];
+    $_SESSION['username'] = $row['username'];
+    header('location:internal.php');
 } else {
-    //Check if password correct
-    echo "USERNAME Ada di Database<br/>";
-    echo "PASSWORD yang Diinput di form login: " . $password;
-    echo "<br/>Password yang tersimpan di database: " . $row['password'];
-    if (password_verify($password, $row['password']) && $_POST['captcha'] == $_POST['confirmcaptcha']) {
-        //Login success, set SESSION DATA
-        $_SESSION['user_id'] = $row['id'];
-        $_SESSION['role'] = $row['role'];
-        $_SESSION['username'] = $row['username'];
-        header('location:internal.php');
-    } else {
-        echo "Wrong Password";
-    }
+    echo "Wrong Password or Captcha<br>";
+    echo "<p class='mt-5 text-center text-sm text-gray-500 mb-5'>
+            <a href='login.php' class='font-semibold leading-6 text-indigo-600 hover:text-indigo-500'>Login</a>
+        </p>";
 }

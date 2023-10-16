@@ -12,6 +12,11 @@ $jenismenu = [
     "vegetables" => "Vegetables",
     "drink" => "Drink"
 ];
+
+$sql = "SELECT role FROM login";
+$stmt = $kunci->prepare($sql);
+$stmt->execute();
+
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +52,7 @@ $jenismenu = [
                         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Afungnima</span>
                     </a>
                     <div class="flex md:order-2">
-                        <button type="button" onclick="login()" id="loginbutton" class="flex gap-3 cursor-pointer text-white font-semibold bg-gradient-to-r from-gray-800 to-black px-7 py-3 rounded-full border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900">
+                        <button type="button" onclick="login()" id="loginbutton" class="mx-3 flex gap-3 cursor-pointer text-white font-semibold bg-gradient-to-r from-gray-800 to-black px-7 py-3 rounded-full border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900">
                             Login
                         </button>
                         <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
@@ -65,9 +70,6 @@ $jenismenu = [
                             <li>
                                 <a href="#sectionkategorimenu" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 md:dark:hover:text-gray-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Menu Makanan</a>
                             </li>
-                            <li>
-                                <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 md:dark:hover:text-gray-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Order</a>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -80,8 +82,8 @@ $jenismenu = [
             </div>
             <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                 <div class="text-center">
-                    <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Selamat Datang di Afungnima Restourant</h1>
-                    <p class="mt-6 text-lg leading-8 text-white">Afungnima Restourant menyajikan berbagai menu yang dapat anda nikmati</p>
+                    <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Selamat Datang di Afungnima Restaurant</h1>
+                    <p class="mt-6 text-lg leading-8 text-white">Afungnima Restaurant menyajikan berbagai menu yang dapat anda nikmati</p>
                     <div class="mt-10 flex items-center justify-center gap-x-6">
                         <button type="button" onclick="register()" id="registerbutton" class="flex gap-3 cursor-pointer text-white font-semibold bg-gradient-to-r from-gray-800 to-black px-7 py-3 rounded-full border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900">
                             Register
@@ -98,7 +100,6 @@ $jenismenu = [
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl py-16 sm:py-16 lg:max-w-none lg:py-16">
                     <h2 class="text-2xl font-bold text-white">Kategori Menu</h2>
-
                     <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
                         <div class="group relative" data-aos="zoom-in">
                             <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
@@ -116,7 +117,7 @@ $jenismenu = [
                             <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                                 <img src="https://st2.depositphotos.com/3210553/9823/i/450/depositphotos_98232150-stock-photo-pan-fried-salmon-with-tender.jpg" alt="Makanan Utama" class="h-full w-full object-cover object-center">
                             </div>
-                            <h3 class="mt-4 text-sm text-white">
+                            <h3 class="mt-3 text-sm text-white">
                                 <a href="#sectionmain course">
                                     <span class="absolute inset-0"></span>
                                     Main Course
@@ -189,20 +190,18 @@ $jenismenu = [
                         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) :
                         ?>
                             <div style="display: flex; flex-direction:column">
-                                <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md px-4 py-4">
+                                <div class="w-full mb-5 max-w-md bg-gray-800 rounded-lg shadow-md px-4 py-4">
                                     <div class="group relative" data-aos="zoom-in" onclick="toggleDetails(<?= $row['idmenu'] ?>)">
                                         <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                                             <?php echo "<img src='fotomenu/" . $row["fotomenu"] . "' class='h-full w-full object-cover object-center'>"; ?>
                                         </div>
                                         <h3 class="mt-3 text-sm text-white">
-                                            <a>
-                                                <span class="absolute inset-0"></span>
-                                                <?= $row['namamenu'] ?>
-                                            </a>
+                                            <p class="text-base font-semibold text-white my-1"><?= $row['namamenu'] ?></p>
                                         </h3>
                                     </div>
                                     <div id="details_<?= $row['idmenu'] ?>" class="menu-details">
-                                        <p class="text-base font-semibold text-white my-1"><?= $row['deskripsimenu'] ?></p>
+                                        <p class="text-base text-white my-1"><?= $row['deskripsimenu'] ?></p>
+                                        <br>
                                         <div style="display: flex; justify-content: space-between;">
                                             <p class="text-base font-semibold text-white my-1">Harga: Rp<?= $row['hargamenu'] ?></p>
                                             <button type="button" onclick="pesan(<?= $row['idmenu'] ?>)" class="flex gap-3 cursor-pointer text-white font-semibold bg-gradient-to-r from-gray-800 to-black px-7 py-3 rounded-full border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900">
@@ -235,10 +234,14 @@ $jenismenu = [
         }
 
         function pesan(idmenu) {
-            // Lakukan aksi pesan di sini, misalnya memunculkan form pesan atau mengirimkan data ke server
-            console.log(`Pesan menu dengan ID ${idmenu}`);
+            <?php if (isset($_SESSION['user_id']) && $role = 'user') : ?>
+                console.log(`Tambahkan menu dengan ID ${idmenu} ke keranjang pemesanan`);
+            <?php else : ?>
+                window.location.href = 'login.php';
+            <?php endif; ?>
         }
     </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

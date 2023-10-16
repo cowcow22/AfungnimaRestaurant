@@ -43,11 +43,11 @@ $jenismenu = [
         <header class="absolute inset-x-0 top-0 z-50">
             <nav class="bg-white dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
-                    <a href="index.php" class="flex items-center">
+                    <a href="userPage.php" class="flex items-center">
                         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Afungnima</span>
                     </a>
                     <div class="flex md:order-2">
-                        <button type="button" onclick="logout()" id="logoutbutton" class="flex gap-3 cursor-pointer text-white font-semibold bg-gradient-to-r from-gray-800 to-black px-7 py-3 rounded-full border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900">
+                        <button type="button" onclick="logout()" id="logoutbutton" class="mx-3 flex gap-3 cursor-pointer text-white font-semibold bg-gradient-to-r from-gray-800 to-black px-7 py-3 rounded-full border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900">
                             Logout
                         </button>
                         <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
@@ -66,7 +66,7 @@ $jenismenu = [
                                 <a href="#sectionkategorimenu" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 md:dark:hover:text-gray-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Menu Makanan</a>
                             </li>
                             <li>
-                                <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 md:dark:hover:text-gray-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Order</a>
+                                <a href="order.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 md:dark:hover:text-gray-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Order</a>
                             </li>
                         </ul>
                     </div>
@@ -75,13 +75,10 @@ $jenismenu = [
         </header>
 
         <div class="relative isolate px-6 pt-14 lg:px-8">
-            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-            </div>
             <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                 <div class="text-center">
-                    <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Selamat Datang di Afungnima Restourant</h1>
-                    <p class="mt-6 text-lg leading-8 text-white">Afungnima Restourant menyajikan berbagai menu yang dapat anda nikmati</p>
+                    <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Selamat Datang di Afungnima Restaurant</h1>
+                    <p class="mt-6 text-lg leading-8 text-white">Afungnima Restaurant menyajikan berbagai menu yang dapat anda nikmati</p>
                 </div>
             </div>
             <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
@@ -89,6 +86,9 @@ $jenismenu = [
             </div>
         </div>
         <section class="bg-gray-900" id="sectionkategorimenu">
+            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl py-16 sm:py-16 lg:max-w-none lg:py-16">
                     <h2 class="text-2xl font-bold text-white">Kategori Menu</h2>
@@ -183,7 +183,7 @@ $jenismenu = [
                         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) :
                         ?>
                             <div style="display: flex; flex-direction:column">
-                                <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md px-4 py-4">
+                                <div class="w-full max-w-md mb-5 bg-gray-800 rounded-lg shadow-md px-4 py-4">
                                     <div class="group relative" data-aos="zoom-in" onclick="toggleDetails(<?= $row['idmenu'] ?>)">
                                         <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                                             <?php echo "<img src='fotomenu/" . $row["fotomenu"] . "' class='h-full w-full object-cover object-center'>"; ?>
@@ -217,16 +217,6 @@ $jenismenu = [
         function logout() {
             window.location.href = 'logout.php';
         }
-    </script>
-    <script>
-        function login() {
-            window.location.href = 'login.php';
-        }
-
-        function register() {
-            window.location.href = 'register.php';
-
-        }
 
         function toggleDetails(idmenu) {
             const detailsElement = document.getElementById(`details_${idmenu}`);
@@ -234,8 +224,11 @@ $jenismenu = [
         }
 
         function pesan(idmenu) {
-            // Lakukan aksi pesan di sini, misalnya memunculkan form pesan atau mengirimkan data ke server
-            console.log(`Pesan menu dengan ID ${idmenu}`);
+            <?php if (isset($_SESSION['user_id']) && $role = 'user') : ?>
+                console.log(`Tambahkan menu dengan ID ${idmenu} ke keranjang pemesanan`);
+            <?php else : ?>
+                window.location.href = 'login.php';
+            <?php endif; ?>
         }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
