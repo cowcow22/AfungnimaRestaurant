@@ -107,18 +107,27 @@ $role = $stmt->fetchColumn();
     </div>
     </section>
     <script>
-        function login() {
-            window.location.href = 'login.php';
-        }
+        //cek untuk tombol login/logout
+        <?php if (isset($_SESSION['user_id'])) : ?>
+            <?php if ($stmt->$role = 'user') : ?>
 
-        function backtomenu() {
-            <?php if (isset($_SESSION['user_id']) && $role = 'user') : ?>
-                window.location.href = 'userPage.php';
+                function login() {
+                    window.location.href = 'logout.php';
+                }
             <?php else : ?>
-                window.location.href = 'index.php';
-            <?php endif; ?>
-        }
 
+                function login() {
+                    window.location.href = 'login.php';
+                }
+            <?php endif; ?>
+        <?php else : ?>
+
+            function login() {
+                window.location.href = 'login.php';
+            }
+        <?php endif; ?>
+
+        //cek untuk tombol login/logout
         <?php if (isset($_SESSION['user_id'])) : ?>
             <?php if ($stmt->$role = 'user') : ?>
 
