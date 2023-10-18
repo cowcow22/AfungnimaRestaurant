@@ -1,13 +1,12 @@
 <?php
 session_start();
-$dsn = "mysql:host=localhost;dbname=utslecpemweb";
-$kunci = new PDO($dsn, "root", "");
+require('db.php');
 
 $idmenu = isset($_GET['idmenu']) ? $_GET['idmenu'] : null;
 
 if ($idmenu !== null) {
     $sql = "SELECT * FROM daftarmenu WHERE idmenu = :idmenu";
-    $stmt = $kunci->prepare($sql);
+    $stmt = $db->prepare($sql);
     $stmt->bindParam(':idmenu', $idmenu, PDO::PARAM_INT);
     $stmt->execute();
     $data = $stmt->fetch(PDO::FETCH_ASSOC);

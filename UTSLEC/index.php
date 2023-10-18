@@ -1,8 +1,6 @@
 <?php
 session_start();
-
-$dsn = "mysql:host=localhost;dbname=utslecpemweb";
-$kunci = new PDO($dsn, "root", "");
+require('db.php');
 
 $jenismenu = [
     "appetizer" => "Appetizer",
@@ -14,7 +12,7 @@ $jenismenu = [
 ];
 
 $sql = "SELECT role FROM login";
-$stmt = $kunci->prepare($sql);
+$stmt = $db->prepare($sql);
 $stmt->execute();
 
 ?>
@@ -184,7 +182,7 @@ $stmt->execute();
                     <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
                         <?php
                         $sql = "SELECT * FROM daftarmenu WHERE jenismenu = ?";
-                        $stmt = $kunci->prepare($sql);
+                        $stmt = $db->prepare($sql);
                         $stmt->execute([$key]);
 
                         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) :

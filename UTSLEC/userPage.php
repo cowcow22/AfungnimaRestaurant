@@ -1,8 +1,6 @@
 <?php
 session_start();
-
-$dsn = "mysql:host=localhost;dbname=utslecpemweb";
-$kunci = new PDO($dsn, "root", "");
+require_once("db.php");
 
 $jenismenu = [
     "appetizer" => "Appetizer",
@@ -177,7 +175,7 @@ $jenismenu = [
                     <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
                         <?php
                         $sql = "SELECT * FROM daftarmenu WHERE jenismenu = ?";
-                        $stmt = $kunci->prepare($sql);
+                        $stmt = $db->prepare($sql);
                         $stmt->execute([$key]);
 
                         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) :
@@ -199,9 +197,12 @@ $jenismenu = [
                                         <p class="text-base font-semibold text-white my-1"><?= $row['deskripsimenu'] ?></p>
                                         <div style="display: flex; justify-content: space-between;">
                                             <p class="text-base font-semibold text-white my-1">Harga: Rp<?= $row['hargamenu'] ?></p>
-                                            <button type="button" onclick="pesan(<?= $row['idmenu'] ?>)" class="flex gap-3 cursor-pointer text-white font-semibold bg-gradient-to-r from-gray-800 to-black px-7 py-3 rounded-full border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900">
-                                                Pesan
-                                            </button>
+                                            <form action="order_process.php" method="post">
+                                                <input type="text" value="<?= $row['hargamenu'] ?>" name="harga" hidden>
+                                                <button type="submit" name="buttonpesan" value="<?= $row['idmenu'] ?>" class="flex gap-3 cursor-pointer text-white font-semibold bg-gradient-to-r from-gray-800 to-black px-7 py-3 rounded-full border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900">
+                                                    Pesan
+                                                </button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -221,14 +222,6 @@ $jenismenu = [
         function toggleDetails(idmenu) {
             const detailsElement = document.getElementById(`details_${idmenu}`);
             detailsElement.classList.toggle('menu-details-active');
-        }
-
-        function pesan(idmenu) {
-            <?php if (isset($_SESSION['user_id']) && $role = 'user') : ?>
-                console.log(`Tambahkan menu dengan ID ${idmenu} ke keranjang pemesanan`);
-            <?php else : ?>
-                window.location.href = 'login.php';
-            <?php endif; ?>
         }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>

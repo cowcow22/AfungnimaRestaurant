@@ -10,8 +10,6 @@ $jenisKelamin = $_POST['jeniskelamin'];
 $password = $_POST['password'];
 $kodereff = $_POST['kodereff'];
 
-// $role = $_POST['role'];
-
 //encrypt the password
 $en_pass = password_hash($password, PASSWORD_BCRYPT);
 

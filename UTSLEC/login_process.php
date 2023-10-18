@@ -14,9 +14,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$row) {
     echo "User not Found!";
-    //header('location:login.php');
 } else if (password_verify($password, $row['password']) && $_POST['captcha'] == $_POST['confirmcaptcha']) {
-    //Login success, set SESSION DATA
     $_SESSION['user_id'] = $row['id'];
     $_SESSION['role'] = $row['role'];
     $_SESSION['username'] = $row['username'];

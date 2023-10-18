@@ -1,7 +1,6 @@
 <?php
 session_start();
-$dsn = "mysql:host=localhost;dbname=utslecpemweb";
-$kunci = new PDO($dsn, "root", "");
+require_once('db.php');
 
 $idmenu = $_POST['idmenu'];
 $jenismenu = $_POST['jenismenu'];
@@ -26,7 +25,7 @@ if (isset($_FILES['fotomenu']) && $_FILES['fotomenu']['error'] === UPLOAD_ERR_OK
             move_uploaded_file($_FILES['fotomenu']['tmp_name'], "fotomenu/{$fotomenu}");
             echo "File berhasil di upload";
 
-            $stmt = $kunci->prepare($sql);
+            $stmt = $db->prepare($sql);
             $data = [$idmenu, $jenismenu, $namamenu, $deskripsimenu, $hargamenu, $fotomenu];
             $stmt->execute($data);
             header('Location: adminPage.php?success=1');

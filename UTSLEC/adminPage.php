@@ -5,12 +5,11 @@ if (isset($_GET['success'])) {
     $successMessage = '<br/><div class="alert alert-success text-center my-6 text-white">Data berhasil di Insert.</div>';
 }
 
-$dsn = "mysql:host=localhost;dbname=utslecpemweb";
-$kunci = new PDO($dsn, "root", "");
+require('db.php');
 
 $sql = "SELECT * FROM daftarmenu";
 
-$hasil = $kunci->query($sql);
+$hasil = $db->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +28,7 @@ $hasil = $kunci->query($sql);
         <header class="absolute inset-x-0 top-0 z-50" style="position:fixed; background-color:white">
             <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
-                    <a href="userPage.php" class="flex items-center">
+                    <a href="adminPage.php" class="flex items-center">
                         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Afungnima</span>
                     </a>
                     <div class="flex md:order-2">

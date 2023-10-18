@@ -1,10 +1,5 @@
 <?php
-$dsn = "mysql:host=localhost; dbname=utslecpemweb;";
-$kunci = new PDO($dsn, "root", "");
-
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
+require_once('db.php');
 
 $idmenu = $_POST["idmenu"];
 $jenismenu = $_POST["jenismenu"];
@@ -18,7 +13,7 @@ if (!empty($_FILES['fotomenu']['name'])) {
 
     $foto_path = 'fotomenu/' . $foto_name;
     move_uploaded_file($foto_tmp, $foto_path);
-    $sql = $kunci->prepare("UPDATE daftarmenu SET jenismenu = :jenismenu, namamenu = :namamenu, deskripsimenu = :deskripsimenu, hargamenu = :hargamenu, fotomenu = :fotomenu WHERE idmenu = :idmenu");
+    $sql = $db->prepare("UPDATE daftarmenu SET jenismenu = :jenismenu, namamenu = :namamenu, deskripsimenu = :deskripsimenu, hargamenu = :hargamenu, fotomenu = :fotomenu WHERE idmenu = :idmenu");
     $sql->bindParam(':jenismenu', $jenismenu);
     $sql->bindParam(':namamenu', $namamenu);
     $sql->bindParam(':deskripsimenu', $deskripsimenu);
@@ -26,7 +21,7 @@ if (!empty($_FILES['fotomenu']['name'])) {
     $sql->bindParam(':fotomenu', $foto_name);
     $sql->bindParam(':idmenu', $idmenu);
 } else {
-    $sql = $kunci->prepare("UPDATE daftarmenu SET jenismenu = :jenismenu, namamenu = :namamenu, deskripsimenu = :deskripsimenu, hargamenu = :hargamenu WHERE idmenu = :idmenu");
+    $sql = $db->prepare("UPDATE daftarmenu SET jenismenu = :jenismenu, namamenu = :namamenu, deskripsimenu = :deskripsimenu, hargamenu = :hargamenu WHERE idmenu = :idmenu");
     $sql->bindParam(':jenismenu', $jenismenu);
     $sql->bindParam(':namamenu', $namamenu);
     $sql->bindParam(':deskripsimenu', $deskripsimenu);
