@@ -24,8 +24,13 @@ $randomcaptcha = substr(uniqid(), 5);
             <div class="sm:mx-auto sm:w-full sm:max-w-sm ">
                 <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">Sign in to your account</h2>
             </div>
-            <div id="error" class="text-danger"></div>
-            <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+            <div id="error" class="text-danger">
+                <?php
+                if (isset($_GET['error']))
+                    echo '<h4 class="mt-5 text-center text-1xl font-bold leading-9 tracking-tight text-white" style="color:red;">Wrong Password or captcha</h4>';
+                ?>
+            </div>
+            <div class="mt-5 sm:mx-auto sm:w-full sm:max-w-sm">
                 <form class="space-y-6" action="login_process.php" method="POST">
                     <div class="mb-6">
                         <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
@@ -51,7 +56,11 @@ $randomcaptcha = substr(uniqid(), 5);
         </div>
 
     </div>
-
+    <script>
+        if (performance.navigation.type === 1) {
+            window.location.href = window.location.pathname;
+        }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 

@@ -20,8 +20,5 @@ if (!$row) {
     $_SESSION['username'] = $row['username'];
     header('location:internal.php');
 } else {
-    echo "Wrong Password or Captcha<br>";
-    echo "<p class='mt-5 text-center text-sm text-gray-500 mb-5'>
-            <a href='login.php' class='font-semibold leading-6 text-indigo-600 hover:text-indigo-500'>Login</a>
-        </p>";
+    header('location:login.php?error=1');
 }

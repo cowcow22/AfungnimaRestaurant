@@ -72,7 +72,7 @@
                 return false;
             } else
             if (password != password2) {
-                message = `<p class="text-center p-2">Incorrect Password</p>`;
+                message = `<p class="text-center mt-5 text-center text-1xl font-bold leading-9 tracking-tight" style="color: red;">Incorrect Password</p>`;
                 errorMessage.innerHTML = message;
                 return false;
             } else {
