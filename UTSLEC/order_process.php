@@ -6,7 +6,7 @@ $pesanIdMenu = $_POST['buttonpesan'];
 $harga = $_POST['harga'];
 $username = $_SESSION['username'];
 
-$sql = "SELECT jumlahpesanan,harga FROM `order` WHERE idmenu = ? AND username = ? ";
+$sql = "SELECT jumlahpesanan, harga FROM `order` WHERE idmenu = ? AND username = ? ";
 $stmt = $db->prepare($sql);
 $stmt->execute([$pesanIdMenu, $username]);
 
@@ -17,8 +17,8 @@ if (!$row) {
     $stmt = $db->prepare($queryInsert);
     $stmt->execute([$username, $pesanIdMenu, $harga]);
 } else if ($row > 1) {
-    $queryUpdate = 'UPDATE `order` SET jumlahpesanan = ' . ($row['jumlahpesanan'] + 1) . ',harga = ' . ($row['harga'] + $harga) . ' WHERE idmenu = ? AND username = ?';
+    $queryUpdate = 'UPDATE `order` SET jumlahpesanan = ' . ($row['jumlahpesanan'] + 1) . ', harga = ' . ($row['harga'] + $harga) . ' WHERE idmenu = ? AND username = ?';
     $stmt = $db->prepare($queryUpdate);
     $stmt->execute([$pesanIdMenu, $username]);
 }
-header("location: userPage.php#sectionkategorimenu");
+header("location: userPage.php#sectionkategori");

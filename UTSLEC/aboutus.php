@@ -16,8 +16,7 @@ $role = $stmt->fetchColumn();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About Us</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-
+    <link rel="stylesheet" href="./assets/css/style2.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
 </head>
@@ -64,42 +63,42 @@ $role = $stmt->fetchColumn();
 
             <div class="team-content">
                 <div class="box bg-gray-800">
-                    <img src="../fotomakanan/appetizer/appetizer-adalah6-300x224.jpg">
+                    <img src="../UTSLEC/assets/fotoaboutus/koko.jpg">
                     <h3>Stevanus Firman W.</h3>
-                    <h5>Artist</h5>
+                    <h5>Developer</h5>
                     <div class="icons">
-                        <a href="#"><i class="ri-linkedin-fill"></i></a>
-                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                        <a href="https://www.linkedin.com/in/stevanus-firman-widyatmoko-036350278/"><i class="ri-linkedin-fill"></i></a>
+                        <a href="https://www.instagram.com/stevfirman/"><i class="ri-instagram-fill"></i></a>
                     </div>
                 </div>
 
                 <div class="box bg-gray-800">
-                    <img src="../fotomakanan/appetizer/appetizer-adalah6-300x224.jpg">
+                    <img src="../UTSLEC/assets/fotoaboutus/brian.jpeg">
                     <h3>Brian Ricky Budiman</h3>
-                    <h5>Artist</h5>
+                    <h5>Developer</h5>
                     <div class="icons">
-                        <a href="#"><i class="ri-linkedin-fill"></i></a>
-                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                        <a href="https://www.linkedin.com/in/brian-ricky-budiman-051161239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="ri-linkedin-fill"></i></a>
+                        <a href="https://instagram.com/brianrickyb?igshid=OGQ5ZDc2ODk2ZA=="><i class="ri-instagram-fill"></i></a>
                     </div>
                 </div>
 
                 <div class="box bg-gray-800">
-                    <img src="../fotomakanan/appetizer/appetizer-adalah6-300x224.jpg">
+                    <img src="../UTSLEC/assets/fotoaboutus/WhatsApp Image 2023-10-21 at 19.25.52.jpeg">
                     <h3>Darrell Samuel Sundy</h3>
-                    <h5>Artist</h5>
+                    <h5>Developer</h5>
                     <div class="icons">
-                        <a href="#"><i class="ri-linkedin-fill"></i></a>
-                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                        <a href="https://www.linkedin.com/in/darrell-sundy-5943a3297/"><i class="ri-linkedin-fill"></i></a>
+                        <a href="https://www.instagram.com/dar.sundy/"><i class="ri-instagram-fill"></i></a>
                     </div>
                 </div>
 
                 <div class="box bg-gray-800">
-                    <img src="../fotomakanan/appetizer/appetizer-adalah6-300x224.jpg">
+                    <img src="../UTSLEC/assets/fotoaboutus/gavin.jpeg">
                     <h3>Gavin Prasetya</h3>
-                    <h5>Artist</h5>
+                    <h5>Developer</h5>
                     <div class="icons">
-                        <a href="#"><i class="ri-linkedin-fill"></i></a>
-                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                        <a href="https://www.linkedin.com/in/gavin-prasetya-99689a21b/"><i class="ri-linkedin-fill"></i></a>
+                        <a href="https://www.instagram.com/gapin_p/"><i class="ri-instagram-fill"></i></a>
                     </div>
                 </div>
 
@@ -117,13 +116,13 @@ $role = $stmt->fetchColumn();
             <?php else : ?>
 
                 function login() {
-                    window.location.href = 'login.php';
+                    window.location.href = 'loginregister.php';
                 }
             <?php endif; ?>
         <?php else : ?>
 
             function login() {
-                window.location.href = 'login.php';
+                window.location.href = 'loginregister.php';
             }
         <?php endif; ?>
 

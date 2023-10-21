@@ -1,6 +1,6 @@
 <?php
 //DB Credentials
-define('DSN', 'mysql:host=localhost;dbname=utslecpemweb');
+define('DSN', 'mysql:host=localhost;dbname=utspemweblec');
 define('DBUSER', 'root');
 define('DBPASS', '');
 

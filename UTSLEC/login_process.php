@@ -20,5 +20,5 @@ if (!$row) {
     $_SESSION['username'] = $row['username'];
     header('location:internal.php');
 } else {
-    header('location:login.php?error=1');
+    header('location:loginregister.php?error=1');
 }
