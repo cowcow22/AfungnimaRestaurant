@@ -19,9 +19,9 @@ $jenismenu = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afungnima Restaurant IF330-B Kelompok 2</title>
-    <meta name="title" content="Grilli - Amazing & Delicious Food">
-    <meta name="description" content="This is a Restaurant html template made by codewithsadee">
+    <title>Afungnima Restaurant IF330-B Kelompok 3</title>
+    <meta name="title" content="Afungnima Restaurant">
+    <meta name="description" content="This is a Afungnima Restaurant">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
@@ -86,15 +86,12 @@ $jenismenu = [
                             <span class="span">Order</span>
                         </a>
                     </li>
-                    <li class="navbar-item">
-                        <a href="logout.php" class="btn btn-secondary buttonlogout">
-                            <div class="separator"></div>
-                            <span class="text text-1 span">Logout</span>
-                            <span class="text text-2 span" aria-hidden="true">Logout</span>
-                        </a>
-                    </li>
                 </ul>
             </nav>
+            <a href="logout.php" class="btn btn-secondary mt-3 mb-3">
+                <span class="text text-1 span">Logout</span>
+                <span class="text text-2 span" aria-hidden="true">Logout</span>
+            </a>
             <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
                 <span class="line line-1"></span>
                 <span class="line line-2"></span>
@@ -119,10 +116,6 @@ $jenismenu = [
                         <p class="body-2 hero-text slider-reveal">
                             Come with family & feel the joy of mouthwatering food
                         </p>
-                        <a href="loginregister.php" class="btn btn-primary slider-reveal">
-                            <span class="text text-1">Register</span>
-                            <span class="text text-2" aria-hidden="true">Register</span>
-                        </a>
                     </li>
                     <li class="slider-item" data-hero-slider-item>
                         <div class="slider-bg">
@@ -134,12 +127,8 @@ $jenismenu = [
                             the Seasons
                         </h1>
                         <p class="body-2 hero-text slider-reveal">
-                            Come with family & feel the joy of mouthwatering food
+                            Feel the Flavors inside your mouth
                         </p>
-                        <a href="loginregister.php" class="btn btn-primary slider-reveal">
-                            <span class="text text-1">Register</span>
-                            <span class="text text-2" aria-hidden="true">Register</span>
-                        </a>
                     </li>
                     <li class="slider-item" data-hero-slider-item>
                         <div class="slider-bg">
@@ -151,12 +140,9 @@ $jenismenu = [
                             tells a story
                         </h1>
                         <p class="body-2 hero-text slider-reveal">
-                            Come with family & feel the joy of mouthwatering food
+                            Tell your family and your friend <br>
+                            Here is the most delicious Restaurant
                         </p>
-                        <a href="loginregister.php" class="btn btn-primary slider-reveal">
-                            <span class="text text-1">Register</span>
-                            <span class="text text-2" aria-hidden="true">Register</span>
-                        </a>
                     </li>
                 </ul>
                 <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>

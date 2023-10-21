@@ -24,7 +24,7 @@ $stmt->execute();
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Afungnima Restaurant IF330-B Kelompok 2</title>
+  <title>Afungnima Restaurant IF330-B Kelompok 3</title>
   <meta name="title" content="Afungnima Restaurant">
   <meta name="description" content="This is a Afungnima Restaurant">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,7 +87,7 @@ $stmt->execute();
           </li>
         </ul>
       </nav>
-      <a href="loginregister.php" class="btn btn-secondary">
+      <a href="loginregister.php" class="btn btn-secondary mt-3 mb-3">
         <span class="text text-1">Login</span>
         <span class="text text-2" aria-hidden="true">Login</span>
       </a>
@@ -130,7 +130,7 @@ $stmt->execute();
               the Seasons
             </h1>
             <p class="body-2 hero-text slider-reveal">
-              Come with family & feel the joy of mouthwatering food
+              Feel the Flavors inside your mouth
             </p>
             <a href="loginregister.php" class="btn btn-primary slider-reveal">
               <span class="text text-1">Register</span>
@@ -147,7 +147,8 @@ $stmt->execute();
               tells a story
             </h1>
             <p class="body-2 hero-text slider-reveal">
-              Come with family & feel the joy of mouthwatering food
+              Tell your family and your friend <br>
+              Here is the most delicious Restaurant
             </p>
             <a href="loginregister.php" class="btn btn-primary slider-reveal">
               <span class="text text-1">Register</span>
