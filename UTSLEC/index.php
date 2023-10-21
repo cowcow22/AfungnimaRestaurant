@@ -25,8 +25,8 @@ $stmt->execute();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Afungnima Restaurant IF330-B Kelompok 2</title>
-  <meta name="title" content="Grilli - Amazing & Delicious Food">
-  <meta name="description" content="This is a Restaurant html template made by codewithsadee">
+  <meta name="title" content="Afungnima Restaurant">
+  <meta name="description" content="This is a Afungnima Restaurant">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
