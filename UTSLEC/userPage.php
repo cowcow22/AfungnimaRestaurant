@@ -86,12 +86,15 @@ $jenismenu = [
                             <span class="span">Order</span>
                         </a>
                     </li>
+                    <li class="navbar-item">
+                        <a href="logout.php" class="btn btn-secondary buttonlogout">
+                            <div class="separator"></div>
+                            <span class="text text-1 span">Logout</span>
+                            <span class="text text-2 span" aria-hidden="true">Logout</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
-            <a href="logout.php" class="btn btn-secondary">
-                <span class="text text-1">Logout</span>
-                <span class="text text-2" aria-hidden="true">Logout</span>
-            </a>
             <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
                 <span class="line line-1"></span>
                 <span class="line line-2"></span>
@@ -116,7 +119,7 @@ $jenismenu = [
                         <p class="body-2 hero-text slider-reveal">
                             Come with family & feel the joy of mouthwatering food
                         </p>
-                        <a href="register.php" class="btn btn-primary slider-reveal">
+                        <a href="loginregister.php" class="btn btn-primary slider-reveal">
                             <span class="text text-1">Register</span>
                             <span class="text text-2" aria-hidden="true">Register</span>
                         </a>
@@ -133,7 +136,7 @@ $jenismenu = [
                         <p class="body-2 hero-text slider-reveal">
                             Come with family & feel the joy of mouthwatering food
                         </p>
-                        <a href="register.php" class="btn btn-primary slider-reveal">
+                        <a href="loginregister.php" class="btn btn-primary slider-reveal">
                             <span class="text text-1">Register</span>
                             <span class="text text-2" aria-hidden="true">Register</span>
                         </a>
@@ -150,7 +153,7 @@ $jenismenu = [
                         <p class="body-2 hero-text slider-reveal">
                             Come with family & feel the joy of mouthwatering food
                         </p>
-                        <a href="register.php" class="btn btn-primary slider-reveal">
+                        <a href="loginregister.php" class="btn btn-primary slider-reveal">
                             <span class="text text-1">Register</span>
                             <span class="text text-2" aria-hidden="true">Register</span>
                         </a>

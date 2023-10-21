@@ -20,8 +20,8 @@ $stmt->execute([$_SESSION['username']]);
 </head>
 
 <body>
-    <div class="">
-        <header class="absolute inset-x-0 top-0 z-50">
+    <div class="h-screen">
+        <header class="absolute inset-x-0 top-0 z-50 dark:bg-gray-800">
             <nav class="w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
                     <a href="userPage.php" class="flex items-center">
@@ -51,7 +51,6 @@ $stmt->execute([$_SESSION['username']]);
                 </div>
             </nav>
         </header>
-
         <br><br><br>
         <div class="flex flex-col">
             <div class="overflow-x-auto">

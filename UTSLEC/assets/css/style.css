@@ -619,9 +619,8 @@ body.nav-active {
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
-
 .header .btn {
-  display: none;
+  display: block;
 }
 
 .header {
