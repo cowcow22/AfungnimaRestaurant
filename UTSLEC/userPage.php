@@ -54,7 +54,7 @@ $jenismenu = [
     </div>
     <header class="header" style="padding-block: 0px;" data-header>
         <div class="container">
-            <a href="index.php" class="logo">
+            <a href="userPage.php" class="logo">
                 <h2 class="headline-1 section-title">Afungnima</h2>
             </a>
             <nav class="navbar" data-navbar>
