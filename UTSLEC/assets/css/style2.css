@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 .team {
   position: relative;
