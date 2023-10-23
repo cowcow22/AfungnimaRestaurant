@@ -54,8 +54,14 @@ $randomcaptcha = substr(uniqid(), 5);
                 <h1 class="text-black">Sign In</h1>
                 <div id="error" class="text-danger">
                     <?php
-                    if (isset($_GET['error']))
-                        echo '<h4 class="mt-5 text-center text-1xl font-bold leading-9 tracking-tight text-white" style="color:red;">Wrong Password or captcha</h4>';
+                    if (isset($_GET['error'])) {
+                        $error = $_GET['error'];
+                        if ($error == 'wrong') {
+                            echo '<h4 class="mt-5 text-center text-1xl font-bold leading-9 tracking-tight text-white" style="color:red;">Username, password, atau captcha salah</h4>';
+                        } else {
+                            echo '<h4 class="mt-5 text-center text-1xl font-bold leading-9 tracking-tight text-white" style="color:red;">Username Harus Diisi</h4>';
+                        }
+                    }
                     ?>
                 </div>
                 <input type="username" name="username" class="text-black" placeholder="Username" require>

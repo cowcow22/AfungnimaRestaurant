@@ -13,12 +13,13 @@ $stmt->execute([$username]);
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$row) {
-    echo "User not Found!";
+    header('location:loginregister.php?error=1');
+    // echo "User not Found!";
 } else if (password_verify($password, $row['password']) && $_POST['captcha'] == $_POST['confirmcaptcha']) {
     $_SESSION['user_id'] = $row['id'];
     $_SESSION['role'] = $row['role'];
     $_SESSION['username'] = $row['username'];
     header('location:internal.php');
 } else {
-    header('location:loginregister.php?error=1');
+    header('location:loginregister.php?error=wrong');
 }
